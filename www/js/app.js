@@ -27,4 +27,12 @@ angular.module('starter', ['ionic'])
     };
 
     $scope.desabilitar = false;
+})
+.controller('MeuController', function($scope){
+
+    $scope.itens = [1,2,3,4];
+    $scope.moveItem = function(item, fromIndex, toIndex){
+        $scope.itens.splice(fromIndex,1);
+        $scope.itens.splice(toIndex,0,item);
+    };
 });
