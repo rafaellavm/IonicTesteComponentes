@@ -31,10 +31,55 @@
 
         <!-- corpo da aplicação -->
         <!-- passando uma classe dizendo que existe um header e um footer -->
-       <ion-content class="has-header has-footer">
+       <ion-content class="has-header has-footer" ng-controller="appController">
+           <!-- 7. Cartões de conteúdo -->
+           <div class="card">
+               <div class="item item-divider">
+                   Título
+               </div>
+               <div class="item item-text-wrap">
+                   Conteúdo de um cartão
+               </div>
+
+                <div class="list card">
+                    <a href="#" class="item item-icon-left">
+                        <i class="icon ion-home"></i>
+                            Endereço
+                    </a>
+                      <a href="#" class="item item-icon-left">
+                        <i class="icon ion-ios-telephone"></i>
+                            Telefone
+                    </a>
+                     <a href="#" class="item item-icon-left">
+                        <i class="icon ion-wifi"></i>
+                            Wireless
+                    </a>
+               </div>
+
+           </div>
+
+           <div class="card" ng-repeat="item in noticias" >
+               <div class="item item-avatar">
+                   <img src="img/{{item.imgUser}}">
+                   <h2>{{item.nome}}</h2>
+                   <p>{{item.titulo}}</p>
+               </div>
+               <div class="item item-body">
+                   <img src="img/{{item.imgNot}}">
+                   <p>{{item.descricao}}</p>
+                   <p>
+                       <a href="#" class="subdued">Leia mais...</a>
+                   </p>
+               </div>
+           </div>
+
+
+           <!-- fim 7. Cartões de conteúdo -->
+
+
 
            <!-- 6. Criando listas -->
-           <ul class="list">
+           <!--<ul class="list">
                <li class="item">Item</li>
                <li class="item">Item</li>
                <a class="item item-icon-left" href="#">
@@ -51,20 +96,22 @@
                </a>
                <li class="item">Item</li>
                <li class="item">Item</li>
-           </ul>
+           </ul> -->
 
            <!-- 6. Criando diretivas -->
-           <ion-list ng-controller="MeuController" show-reorder="true">
+           <!--<ion-list ng-controller="MeuController" show-reorder="true">
                <div class="item item-divider">
                    Reordenar lista
                </div>
                <ion-item ng-repeat="item in itens">
-                   <!--on-reorder: evento que vai disparar uma função. Vai passar três parâmetros: o item, o index (de onde ele tá vindo) e passar pra onde ele está indo ($toindex)  -->
+                   <!--on-reorder: evento que vai disparar uma função. Vai passar três parâmetros: o item, o index (de onde ele tá vindo) e passar pra onde ele está indo ($toindex)
                    Item: {{item}}
                    <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item,$fromIndex,$toIndex)">
                    </ion-reorder-button>
                </ion-item>
-           </ion-list>
+           </ion-list>-->
+
+            <!-- fim 6. Criando listas -->
 
            <!-- <h1>Teste</h1>
             <button class="button button-royal" ng-click="alterarNomeBtn('Botão básico')">

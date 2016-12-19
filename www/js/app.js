@@ -35,4 +35,30 @@ angular.module('starter', ['ionic'])
         $scope.itens.splice(fromIndex,1);
         $scope.itens.splice(toIndex,0,item);
     };
+})
+.controller('appController', function($scope){
+    $scope.noticias = [
+
+        {
+            titulo: 'Noticia 1',
+            descricao: 'Descricao 1',
+            imgUser: 'avatar1.png',
+            imgNot: 'ionic.png',
+            nome: 'Pedro'
+        },
+         {
+            titulo: 'Noticia 2',
+            descricao: 'Descricao 3',
+            imgUser: 'avatar1.png',
+            imgNot: 'ionic.png',
+            nome: 'Rafaela'
+        },
+         {
+            titulo: 'Noticia 3',
+            descricao: 'Descricao 3',
+            imgUser: 'avatar1.png',
+            imgNot: 'ionic.png',
+            nome: 'Giovanni'
+        }
+    ];
 });
