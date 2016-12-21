@@ -32,8 +32,65 @@
         <!-- corpo da aplicação -->
         <!-- passando uma classe dizendo que existe um header e um footer -->
        <ion-content class="has-header has-footer" ng-controller="appController">
+
+           <!-- 8. Criando Formulários -->
+
+           <div class="list list-inset">
+               <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                   <input type="text" placeholder="busca" />
+               </label>
+           </div>
+           <div class="list">
+               <label class="item item-input">
+                   <input type="text" placeholder="Nome" />
+               </label>
+                <label class="item item-input">
+                   <input type="text" placeholder="Sobrenome" />
+               </label>
+                <label class="item item-input">
+                   <textarea placeholder="Comentário"></textarea>
+               </label>
+               <button class="button button-full button-balanced">Publicar</button>
+           </div>
+
+
+
+           <div class="list"  ng-controller="formController">
+               <label class="item item-input item-stacked-label">
+                   <span class="input-label" >Nome</span>
+                   <input type="text" ng-model="nome" placeholder="Rafaela" />
+               </label>
+                 <label class="item item-input item-stacked-label">
+                   <span class="input-label" >Sobrenone</span>
+                   <input type="text" placeholder="Marraschi" ng-model="sobrenome"/>
+               </label>
+                 <label class="item item-input item-stacked-label">
+                   <span class="input-label">E-mail</span>
+                   <input type="text" placeholder="rafaela@mail.com" ng-model="email"/>
+               </label>
+               <button class="button button-full button-positive" ng-click="form()">Cadastrar</button>
+           </div>
+
+
+            <div class="list list-inset">
+               <label class="item item-input">
+                   <input type="text" placeholder="Nome" />
+               </label>
+                <label class="item item-input">
+                   <input type="text" placeholder="Sobrenome" />
+               </label>
+                <label class="item item-input">
+                   <textarea placeholder="Comentário"></textarea>
+               </label>
+               <button class="button button-full button-royal">Publicar</button>
+           </div>
+
+
+           <!-- FIM 8. Criando Formulários -->
+
            <!-- 7. Cartões de conteúdo -->
-           <div class="card">
+           <!--<div class="card">
                <div class="item item-divider">
                    Título
                </div>
@@ -71,7 +128,7 @@
                        <a href="#" class="subdued">Leia mais...</a>
                    </p>
                </div>
-           </div>
+           </div>-->
 
 
            <!-- fim 7. Cartões de conteúdo -->

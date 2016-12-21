@@ -61,4 +61,11 @@ angular.module('starter', ['ionic'])
             nome: 'Giovanni'
         }
     ];
+})
+.controller('formController', function($scope){
+
+    $scope.form = function(){
+
+        console.log('Nome: ' + $scope.nome);
+    };
 });
