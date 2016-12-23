@@ -24,18 +24,31 @@
 
 <body ng-app="starter">
 
-    <ion-pane ng-controller="btnController">
+    <ion-pane ng-controller="modalController">
         <ion-header-bar class="bar-calm">
             <h1 class="title">Teste de componentes</h1>
+             <!-- 9 Trabalhando com Modal  -->
+            <button ng-click="modal.show()" class="button button-icon ion-compose"></button>
+             <!-- fim 9 Trabalhando com Modal  -->
         </ion-header-bar>
 
         <!-- corpo da aplicação -->
         <!-- passando uma classe dizendo que existe um header e um footer -->
        <ion-content class="has-header has-footer" ng-controller="appController">
 
+           <!-- 9 Trabalhando com Modal  -->
+
+           <ion-list ng-repeat="contato in contatos">
+               <ion-item>
+                   {{contato.nome}} - {{contato.email}}
+               </ion-item>
+           </ion-list>
+
+           <!-- FIM 9. Trabalhando com Modal  -->
+
            <!-- 8. Criando Formulários -->
 
-           <div class="list list-inset">
+           <!--<div class="list list-inset">
                <label class="item item-input">
                 <i class="icon ion-search placeholder-icon"></i>
                    <input type="text" placeholder="busca" />
@@ -84,7 +97,7 @@
                    <textarea placeholder="Comentário"></textarea>
                </label>
                <button class="button button-full button-royal">Publicar</button>
-           </div>
+           </div> -->
 
 
            <!-- FIM 8. Criando Formulários -->
@@ -197,6 +210,32 @@
             </div>
         </ion-footer-bar>
     </ion-pane>
+
+     <!-- 9 Trabalhando com Modal  -->
+    <!-- template do js -->
+    <script type="text/ng-template" id="templates/modal.html">
+        <ion-modal-view>
+            <ion-header-bar class="bar bar-header bar-positive">
+                <h1 class="title">Novo contato</h1>
+                <button class='button button-clear button-primary' ng-click="modal.hide()">Cancelar</button>
+            </ion-header-bar>
+            <ion-content class="padding">
+                <div class="list">
+                    <label  class="item item-input">
+                        <span class="input-label">Nome</span>
+                        <input type="text" ng-model="contato.nome"/>
+                    </label>
+                    <label  class="item item-input">
+                        <span class="input-label">Email</span>
+                        <input type="text" ng-model="contato.email"/>
+                    </label>
+                    <button ng-click="addContato(contato)" class="button button-full button-positive" >Adicionar</button>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+
+     <!-- fim 9 Trabalhando com Modal  -->
 </body>
 
 </html>

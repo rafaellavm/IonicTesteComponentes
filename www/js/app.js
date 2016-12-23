@@ -38,8 +38,7 @@ angular.module('starter', ['ionic'])
 })
 .controller('appController', function($scope){
     $scope.noticias = [
-
-        {
+         {
             titulo: 'Noticia 1',
             descricao: 'Descricao 1',
             imgUser: 'avatar1.png',
@@ -62,10 +61,64 @@ angular.module('starter', ['ionic'])
         }
     ];
 })
-.controller('formController', function($scope){
 
+.controller('formController', function($scope){
+//8
     $scope.form = function(){
 
         console.log('Nome: ' + $scope.nome);
     };
+})
+
+.controller('modalController',function($scope, $ionicModal){
+  //9
+
+    $scope.contatos = [
+        {nome: 'Camila', email: 'camila@mail.com'},
+        {nome: 'Rafaela', email: 'rafaela@mail.com'},
+        {nome: 'Fernanda', email: 'fernanda@mail.com'}
+    ];
+
+    //escolhendo o template
+    $ionicModal.fromTemplateUrl('templates/modal.html',{
+        //passando os parâmetros:
+        scope: $scope
+    }).then(function(modal){
+        $scope.modal = modal;
+    });
+
+    $scope.addContato = function(contato){
+
+        $scope.contatos.push(
+        {
+            nome: contato.nome,
+            email: contato.email
+        });
+
+        contato.nome ="";
+        contato.email = "";
+
+        //sumir com o modal
+        $scope.modal.hide();
+    };
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
