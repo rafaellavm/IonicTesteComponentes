@@ -34,15 +34,94 @@
 
         <!-- corpo da aplicação -->
         <!-- passando uma classe dizendo que existe um header e um footer -->
-       <ion-content class="has-header has-footer" ng-controller="appController">
+       <ion-content class="has-header has-footer">
+
+           <!-- 10 Sistema de Grid  -->
+
+           <h3>Grid Base</h3>
+
+           <div class="row">
+
+               <div class="col">col.</div>
+               <div class="col">col.</div>
+               <div class="col">col.</div>
+               <div class="col">col.</div>
+               <div class="col">col.</div>
+
+           </div>
+
+           <h3>Tamanhos(10,20,25,33,50,67,75,80,90)</h3>
+
+           <div class="row">
+               <div class="col col-50">col col-50</div>
+               <div class="col">col</div>
+               <div class="col">col</div>
+           </div>
+
+           <div class="row">
+
+               <div class="col">col</div>
+               <div class="col">col</div>
+               <div class="col col-75">col col-75</div>
+           </div>
+
+           <h3>Offset</h3>
+           <!-- com offset ele cria um 'espaco' anterior de tamanho 33 -->
+           <div class="row">
+               <div class="col col-33 col-offset-33">col-33 col-offset-33</div>
+               <div class="col">col</div>
+           </div>
+
+           <div class="row">
+               <div class="card col">
+                   <div class="item item-text-wrap">
+                       Conteúdo de exemplo
+                   </div>
+               </div>
+
+                <div class="card col col-67">
+                   <div class="item item-text-wrap">
+                       Conteúdo de exemplo col 67
+                   </div>
+               </div>
+
+           </div>
+
+           <div class="row">
+               <div class="card col">
+                   <div class="item item-text-wrap">
+                       Conteúdo de exemplo
+                   </div>
+               </div>
+                <div class="card col">
+                   <div class="item item-text-wrap">
+                       Conteúdo de exemplo
+                   </div>
+               </div>
+                <div class="card col">
+                   <div class="item item-text-wrap">
+                       Conteúdo de exemplo
+                   </div>
+               </div>
+
+           </div>
+
+
+           <!-- fim 10 Sistema de Grid  -->
+
+
+
+
+
+
 
            <!-- 9 Trabalhando com Modal  -->
 
-           <ion-list ng-repeat="contato in contatos">
+     <!--      <ion-list ng-repeat="contato in contatos">
                <ion-item>
                    {{contato.nome}} - {{contato.email}}
                </ion-item>
-           </ion-list>
+           </ion-list>-->
 
            <!-- FIM 9. Trabalhando com Modal  -->
 
@@ -213,7 +292,7 @@
 
      <!-- 9 Trabalhando com Modal  -->
     <!-- template do js -->
-    <script type="text/ng-template" id="templates/modal.html">
+   <!-- <script type="text/ng-template" id="templates/modal.html">
         <ion-modal-view>
             <ion-header-bar class="bar bar-header bar-positive">
                 <h1 class="title">Novo contato</h1>
@@ -233,7 +312,7 @@
                 </div>
             </ion-content>
         </ion-modal-view>
-    </script>
+    </script>-->
 
      <!-- fim 9 Trabalhando com Modal  -->
 </body>
