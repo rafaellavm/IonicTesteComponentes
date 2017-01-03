@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="starter">
+
+    <ion-pane ng-controller="modalController">
+        <ion-header-bar class="bar-calm">
+            <h1 class="title">Teste de componentes</h1>
+             <!-- 9 Trabalhando com Modal  -->
+            <button ng-click="modal.show()" class="button button-icon ion-compose"></button>
+             <!-- fim 9 Trabalhando com Modal  -->
+        </ion-header-bar>
+
+        <!-- corpo da aplicação -->
+        <!-- passando uma classe dizendo que existe um header e um footer -->
+       <ion-content class="has-header has-footer">
+
+           <!-- 10 Sistema de Grid  -->
+
+           <h3>Grid Base</h3>
+
+           <div class="row">
+
+               <div class="col">col.</div>
+               <div class="col">col.</div>
+               <div class="col">col.</div>
+               <div class="col">col.</div>
+               <div class="col">col.</div>
+
+           </div>
+
+           <h3>Tamanhos(10,20,25,33,50,67,75,80,90)</h3>
+
+           <div class="row">
+               <div class="col col-50">col col-50</div>
+               <div class="col">col</div>
+               <div class="col">col</div>
+           </div>
+
+           <div class="row">
+
+               <div class="col">col</div>
+               <div class="col">col</div>
+               <div class="col col-75">col col-75</div>
+           </div>
+
+           <h3>Offset</h3>
+           <!-- com offset ele cria um 'espaco' anterior de tamanho 33 -->
+           <div class="row">
+               <div class="col col-33 col-offset-33">col-33 col-offset-33</div>
+               <div class="col">col</div>
+           </div>
+
+           <div class="row">
+               <div class="card col">
+                   <div class="item item-text-wrap">
+                       Conteúdo de exemplo
+                   </div>
+               </div>
+
+                <div class="card col col-67">
+                   <div class="item item-text-wrap">
+                       Conteúdo de exemplo col 67
+                   </div>
+               </div>
+
+           </div>
+
+           <div class="row">
+               <div class="card col">
+                   <div class="item item-text-wrap">
+                       Conteúdo de exemplo
+                   </div>
+               </div>
+                <div class="card col">
+                   <div class="item item-text-wrap">
+                       Conteúdo de exemplo
+                   </div>
+               </div>
+                <div class="card col">
+                   <div class="item item-text-wrap">
+                       Conteúdo de exemplo
+                   </div>
+               </div>
+
+           </div>
+
+
+           <!-- fim 10 Sistema de Grid  -->
+
+
+
+
+
+
+
+           <!-- 9 Trabalhando com Modal  -->
+
+     <!--      <ion-list ng-repeat="contato in contatos">
+               <ion-item>
+                   {{contato.nome}} - {{contato.email}}
+               </ion-item>
+           </ion-list>-->
+
+           <!-- FIM 9. Trabalhando com Modal  -->
+
+           <!-- 8. Criando Formulários -->
+
+           <!--<div class="list list-inset">
+               <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                   <input type="text" placeholder="busca" />
+               </label>
+           </div>
+           <div class="list">
+               <label class="item item-input">
+                   <input type="text" placeholder="Nome" />
+               </label>
+                <label class="item item-input">
+                   <input type="text" placeholder="Sobrenome" />
+               </label>
+                <label class="item item-input">
+                   <textarea placeholder="Comentário"></textarea>
+               </label>
+               <button class="button button-full button-balanced">Publicar</button>
+           </div>
+
+
+
+           <div class="list"  ng-controller="formController">
+               <label class="item item-input item-stacked-label">
+                   <span class="input-label" >Nome</span>
+                   <input type="text" ng-model="nome" placeholder="Rafaela" />
+               </label>
+                 <label class="item item-input item-stacked-label">
+                   <span class="input-label" >Sobrenone</span>
+                   <input type="text" placeholder="Marraschi" ng-model="sobrenome"/>
+               </label>
+                 <label class="item item-input item-stacked-label">
+                   <span class="input-label">E-mail</span>
+                   <input type="text" placeholder="rafaela@mail.com" ng-model="email"/>
+               </label>
+               <button class="button button-full button-positive" ng-click="form()">Cadastrar</button>
+           </div>
+
+
+            <div class="list list-inset">
+               <label class="item item-input">
+                   <input type="text" placeholder="Nome" />
+               </label>
+                <label class="item item-input">
+                   <input type="text" placeholder="Sobrenome" />
+               </label>
+                <label class="item item-input">
+                   <textarea placeholder="Comentário"></textarea>
+               </label>
+               <button class="button button-full button-royal">Publicar</button>
+           </div> -->
+
+
+           <!-- FIM 8. Criando Formulários -->
+
+           <!-- 7. Cartões de conteúdo -->
+           <!--<div class="card">
+               <div class="item item-divider">
+                   Título
+               </div>
+               <div class="item item-text-wrap">
+                   Conteúdo de um cartão
+               </div>
+
+                <div class="list card">
+                    <a href="#" class="item item-icon-left">
+                        <i class="icon ion-home"></i>
+                            Endereço
+                    </a>
+                      <a href="#" class="item item-icon-left">
+                        <i class="icon ion-ios-telephone"></i>
+                            Telefone
+                    </a>
+                     <a href="#" class="item item-icon-left">
+                        <i class="icon ion-wifi"></i>
+                            Wireless
+                    </a>
+               </div>
+
+           </div>
+
+           <div class="card" ng-repeat="item in noticias" >
+               <div class="item item-avatar">
+                   <img src="img/{{item.imgUser}}">
+                   <h2>{{item.nome}}</h2>
+                   <p>{{item.titulo}}</p>
+               </div>
+               <div class="item item-body">
+                   <img src="img/{{item.imgNot}}">
+                   <p>{{item.descricao}}</p>
+                   <p>
+                       <a href="#" class="subdued">Leia mais...</a>
+                   </p>
+               </div>
+           </div>-->
+
+
+           <!-- fim 7. Cartões de conteúdo -->
+
+
+
+           <!-- 6. Criando listas -->
+           <!--<ul class="list">
+               <li class="item">Item</li>
+               <li class="item">Item</li>
+               <a class="item item-icon-left" href="#">
+                   <i class="icon ion-email"></i>Olhar E-mail
+               </a>
+               <a class="item item-icon-left" href="#">
+                   <i class="icon ion-person-stalker"></i>Amigos
+                   <span class="badge badge-assertive">12</span>
+               </a>
+                <a class="item item-avatar" href="#">
+                   <img src="img/avatar1.png">
+                    <h2>Pedro</h2>
+                    <p>Descrição do avatar</p>
+               </a>
+               <li class="item">Item</li>
+               <li class="item">Item</li>
+           </ul> -->
+
+           <!-- 6. Criando diretivas -->
+           <!--<ion-list ng-controller="MeuController" show-reorder="true">
+               <div class="item item-divider">
+                   Reordenar lista
+               </div>
+               <ion-item ng-repeat="item in itens">
+                   <!--on-reorder: evento que vai disparar uma função. Vai passar três parâmetros: o item, o index (de onde ele tá vindo) e passar pra onde ele está indo ($toindex)
+                   Item: {{item}}
+                   <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item,$fromIndex,$toIndex)">
+                   </ion-reorder-button>
+               </ion-item>
+           </ion-list>-->
+
+            <!-- fim 6. Criando listas -->
+
+           <!-- <h1>Teste</h1>
+            <button class="button button-royal" ng-click="alterarNomeBtn('Botão básico')">
+               {{(nomeBtn1 ? nomeBtn1 : 'Botão royal')}}
+            </button>
+            <div class="padding">
+                <label class="item item-input">
+                    <input type="text" placeholder="Digite o nome do botão" ng-model="textoInput"/>
+                </label>
+                <button class="button button-calm button-block" ng-mouseenter="alterarNomeBtn2(textoInput)">
+                    {{(nomeBtn2 ? nomeBtn2 : 'Btn calm')}}
+                </button>
+            </div>
+           <button class="button button-assertive button-full" ng-disabled="desabilitar" ng-click="desabilitar = true">
+               Btn assertive
+           </button>-->
+        </ion-content>
+
+        <ion-footer-bar class="bar-calm">
+            <div class="buttons">
+                <button class="button">Botão esquerdo</button>
+            </div>
+            <h1 class="title">Footer Teste de componentes</h1>
+           <div class="buttons">
+                <button class="button">Botão direito</button>
+            </div>
+        </ion-footer-bar>
+    </ion-pane>
+
+     <!-- 9 Trabalhando com Modal  -->
+    <!-- template do js -->
+   <!-- <script type="text/ng-template" id="templates/modal.html">
+        <ion-modal-view>
+            <ion-header-bar class="bar bar-header bar-positive">
+                <h1 class="title">Novo contato</h1>
+                <button class='button button-clear button-primary' ng-click="modal.hide()">Cancelar</button>
+            </ion-header-bar>
+            <ion-content class="padding">
+                <div class="list">
+                    <label  class="item item-input">
+                        <span class="input-label">Nome</span>
+                        <input type="text" ng-model="contato.nome"/>
+                    </label>
+                    <label  class="item item-input">
+                        <span class="input-label">Email</span>
+                        <input type="text" ng-model="contato.email"/>
+                    </label>
+                    <button ng-click="addContato(contato)" class="button button-full button-positive" >Adicionar</button>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>-->
+
+     <!-- fim 9 Trabalhando com Modal  -->
+</body>
+
+</html>
