@@ -7,8 +7,6 @@
     <title></title>
 
     <link rel="manifest" href="manifest.json">
-
-
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -24,56 +22,8 @@
 
 <body ng-app="starter">
 
-    <ion-pane ng-controller="modalController">
-        <ion-header-bar class="bar-calm">
-            <h1 class="title">Teste de componentes</h1>
-             <!-- 9 Trabalhando com Modal  -->
-            <button ng-click="modal.show()" class="button button-icon ion-compose"></button>
-             <!-- fim 9 Trabalhando com Modal  -->
-        </ion-header-bar>
-
-        <!-- corpo da aplicação -->
-        <!-- passando uma classe dizendo que existe um header e um footer -->
-       <ion-content class="has-header has-footer">
-
-           <ion-list>
-               <ion-checkbox ng-model="cor.azul">Azul</ion-checkbox>
-               <ion-checkbox ng-model="cor.vermelho">Vermelho</ion-checkbox>
-               <ion-checkbox ng-model="cor.verde">Verde</ion-checkbox>
-               <ion-checkbox ng-model="cor.amarelo">Amarelo</ion-checkbox>
-
-               <ion-item>{{cor}}</ion-item>
-           </ion-list>
-
-           <ion-list>
-               <ion-radio ng-model="sexo" ng-value="'masculino'">Masculino</ion-radio>
-               <ion-radio ng-model="sexo" ng-value="'feminino'">Feminino</ion-radio>
-           </ion-list>
-           <ion-item>{{sexo}}</ion-item>
-
-           <div class="list">
-            <div class="item range">
-                <i class="icon ion-volume-low"></i>
-                <input ng-model="volume" type="range" />
-                <i class="icon ion-volume-high"></i>
-            </div>
-            <div class="item">
-                {{volume}}
-            </div>
-        </div>
-
-        </ion-content>
-
-        <ion-footer-bar class="bar-calm">
-            <div class="buttons">
-                <button class="button">Botão esquerdo</button>
-            </div>
-            <h1 class="title">Footer Teste de componentes</h1>
-           <div class="buttons">
-                <button class="button">Botão direito</button>
-            </div>
-        </ion-footer-bar>
-    </ion-pane>
+    <ion-nav-view>
+    </ion-nav-view>
 
 </body>
 

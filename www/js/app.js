@@ -14,6 +14,48 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+//12. Navegação entre páginas
+.config(function($stateProvider, $urlRouterProvider){
+
+    $stateProvider
+
+    .state('app', {
+        url: '/app',
+        abstract: true,
+        templateUrl: 'templates/layout.html'
+    })
+    .state('app.home', {
+        url: '/home',
+        views: {
+            "layoutContent": {
+                templateUrl: 'templates/home.html'
+            }
+        }
+
+    })
+    .state('app.sobre', {
+        url: '/sobre',
+        views: {
+            "layoutContent": {
+                templateUrl: 'templates/sobre.html'
+            }
+        }
+
+    });
+
+    $urlRouterProvider.otherwise('/app/home');
+})
+
+
+
+
+
+
+
+
+
+
 .controller('btnController', function($scope){
 
     $scope.alterarNomeBtn = function(nome){
